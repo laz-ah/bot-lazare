@@ -7,13 +7,12 @@ export async function uptime(client, message) {
     const minutes = Math.floor((uptime % 3600) / 60)
     const seconds = Math.floor(uptime % 60)
     
-    const text = `┌─🤖 Bot-Lazare ─┐
+    const text = `┌─Bot-Lazare ─┐
 │
 │ ⏱️ Uptime: ${days}d ${hours}h ${minutes}m
 │ 💾 RAM: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(1)}MB
 │
-│ "Bot-Lazare"
-│     - DC243 -
+│ "Bot-Lazare
 └────────────────────┘`
     
     await client.sendMessage(remoteJid, { text: text })
